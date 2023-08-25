@@ -1,0 +1,151 @@
+
+* {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+  }
+
+  header {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 1.5rem;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem;
+  }
+
+  .interactive-section {
+    margin-bottom: 4rem;
+    text-align: center;
+  }
+
+  .btn {
+    background-color: #3498db;
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 6px;
+    font-size: 1rem;
+    margin: 0 1rem;
+  }
+
+  .btn:hover {
+    background-color: #2980b9;
+  }
+
+  .slider {
+    width: 150px;
+    height: 8px;
+    background-color: #ccc;
+    margin-top: 1rem;
+    transition: transform 0.3s ease;
+    transform-origin: left;
+  }
+
+  .slider.active {
+    transform: scaleX(1.5);
+  }
+
+  .pseudo-elements-section {
+    position: relative;
+    margin-bottom: 4rem;
+  }
+
+  .decorative-box {
+    width: 300px;
+    height: 300px;
+    background-color: #e74c3c;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+    border-radius: 12px;
+  }
+
+  .decorative-box::before,
+  .decorative-box::after {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background-color: #e74c3c;
+    border-radius: 50%;
+    opacity: 0.7;
+    transition: transform 0.4s ease;
+  }
+
+  .decorative-box::before {
+    top: -40px;
+    left: -40px;
+    transform: scale(0);
+  }
+
+  .decorative-box::after {
+    bottom: -40px;
+    right: -40px;
+    transform: scale(0);
+  }
+
+  .decorative-box:hover::before,
+  .decorative-box:hover::after {
+    transform: scale(1);
+  }
+
+  .three-d-section {
+    perspective: 1000px;
+    margin-bottom: 4rem;
+  }
+
+  .rotating-cube {
+    width: 150px;
+    height: 150px;
+    background-color: #2ecc71;
+    transform-style: preserve-3d;
+    animation: rotate 10s infinite linear;
+    transform: rotateX(45deg) rotateY(45deg);
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotateX(45deg) rotateY(45deg);
+    }
+    100% {
+      transform: rotateX(405deg) rotateY(405deg);
+    }
+  }
+
+.interactive-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .interactive-content h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .pseudo-elements-section p {
+    margin: 0;
+  }
+
+  .three-d-section h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+
